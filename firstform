@@ -1,0 +1,107 @@
+    <!-- form -->
+<!-- Every field without name will not send to the server -->
+<!-- Button: get click from the user -->
+
+<!-- Select tag (combo box):-->
+<!-- Select one item from a group -->
+
+
+<!-- Validation:-->
+<!-- Use restrictive controls: select, radio, checkbox, number, date, color (avoiding hacking)
+Attributes: max length, min length, required, place holder 
+RegEx (regular expression): pattern to validate value (example email)
+  -->
+
+  <!-- HTML 5 -->
+<!-- Audio, video: display video and audio
+Canvas: allow free drawing (charts, draw, games) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<link rel="stylesheet" href="homework-class-3.css">
+<body>
+  
+<!-- form -->
+
+<form action="/action_page.php" method="get">
+  <fieldset>
+      <legend>failure report</legend>
+
+
+    <label for="fname"><b>First name</b></label><br>
+    <input list="First name" name="First name" required autofocus maxlength="25">
+    <datalist id="First name"><br><br>
+        <option value="Lior"></option>
+        <option value="Yuval"></option>
+        <option value="Roy"></option>
+        <option value="Mor"></option>
+        <option value="Ron"></option>
+    </datalist><br><br>
+
+
+    <!-- <label for="fname"><b>First name</b></label><br>
+    <input type="text" id=fname name="fname" value=""><br><br> -->
+
+    <label for="lname"><b>Last name</b></label><br>
+    <input list="lname" name="lname" required maxlength="25">
+    <datalist id="lname"><br><br>
+        <option value="halperin"></option>
+        <option value="Cohen"></option>
+        <option value="kashkash"></option>
+    </datalist><br><br>
+
+    <!-- <label for="lname"><b>Last name</b></label><br>
+    <input type="text" id="lname" name="lname" value=""><br><br> -->
+
+
+    <label for="Reporter"><b>Reporter:</b></label><br>
+    <label for="Manager"><b>Manager</b></label>
+    <input type="radio" id="Manager" name="Reporter" value="Manager">
+    <label for="Volunteer"><b>Volunteer</b></label>
+    <input type="radio" id="Volunteer" name="Reporter" value="Volunteer"><br><br>
+
+    <!-- <label for="Reporter"><b>Reporter</b></label><br>
+    <select name="Reporter" id="Reporter">
+        <option value="Manager">Manager</option>
+        <option value="Volunteer">Volunteer</option>
+    </select><br><br> -->
+
+    <label for="navbartag"><b>Navigation Bar Tab</b></label><br>
+    <select name="navbartag" id="navbartag">
+        <optgroup label="Navigation Bar Tab">
+        <option value="Main Dashboard">Main Dashboard</option>
+        <option value="Manage Teams">Manage Teams</option>
+        <option value="Manage Addresses">Manage Addresses</option>
+        </optgroup>
+    </select><br><br>
+
+    <label for="date"><b>Date</b></label><br>
+    <input type="datetime-local" id="date" name="date"><br><br>
+    
+    <label for="quantity"><b>Urgency</b></label><br>
+    <input type="number" id="urgency" name="urgency" min="1" max="3" value="0"><br><br>
+
+    <label for="Yourreport"><b>Your report</b></label><br>
+    <textarea name="message" rows="5" cols="30" placeholder="Please type your comment here" required maxlength="250"></textarea><br>
+    <label for="files">Select files:</label>
+    <input type="file" id="files" name="files" multiple><br><br>
+
+    <input type="submit" name="submit" id="submit" value="submit">
+    <input type="reset" name="reset" id="reset" value="reset">
+</fieldset>
+
+<!-- <input type="hidden" id="custId" name="custId" value="3487">
+The hidden field is not shown to the user, but the data is sent when the form is submitted.   -->
+       
+</form>
+    
+
+</body>
+</html>
